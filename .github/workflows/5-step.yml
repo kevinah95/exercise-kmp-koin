@@ -12,7 +12,7 @@ permissions:
   issues: write
 
 env:
-  STEP_6_FILE: ".github/steps/6-pull-request.md"
+  STEP_6_FILE: ".github/steps/6-step.md"
 
 jobs:
   find_exercise:
