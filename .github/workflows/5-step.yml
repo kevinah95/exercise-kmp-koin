@@ -19,8 +19,8 @@ jobs:
     name: Find Exercise Issue
     uses: skills/exercise-toolkit/.github/workflows/find-exercise-issue.yml@v0.7.0
 
-  post_review_content:
-    name: Post review content
+  post_next_step_content:
+    name: Post next step content
     needs: [find_exercise]
     runs-on: ubuntu-latest
     env:
@@ -49,6 +49,12 @@ jobs:
           repository: ${{ env.ISSUE_REPOSITORY }}
           issue-number: ${{ env.ISSUE_NUMBER }}
           file: ${{ env.STEP_6_FILE }}
+      - name: Create comment - watching for progress
+        uses: GrantBirki/comment@v2.1.1
+        with:
+          repository: ${{ env.ISSUE_REPOSITORY }}
+          issue-number: ${{ env.ISSUE_NUMBER }}
+          file: exercise-toolkit/markdown-templates/step-feedback/watching-for-progress.md
       - name: Disable current workflow and enable next one
         run: |
           gh workflow disable "${{github.workflow}}"
