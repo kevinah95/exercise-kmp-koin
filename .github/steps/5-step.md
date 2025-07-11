@@ -1,13 +1,8 @@
 
+
 ## Step 5: Usa las dependencias inyectadas en la UI
 
-> **Importante:** Realiza todos los pasos del ejercicio en un solo branch de trabajo llamado `feature/koin-kmp`.
-
----
-
-### Paso final: Pull Request y Merge
-
-Cuando termines todos los pasos, crea un Pull Request de tu branch de ejercicio hacia `main`. El workflow automatizado hará merge cuando pases la revisión.
+> **Importante:** Realiza este paso en el branch `feature/koin-kmp`.
 
 ¡Ya tienes Koin funcionando en ambas plataformas! Ahora es momento de consumir las dependencias inyectadas (por ejemplo, el UserRepository) desde la UI usando Koin y Compose Multiplatform.
 
