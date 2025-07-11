@@ -1,27 +1,45 @@
-## Step 3: (replace-me: STEP-NAME)
+## Step 3: Configura los módulos de Koin
 
-(replace-me: OPTIONAL Brief story or scenario to introduce the step)
+Ahora que tienes tus modelos y repositorios, es momento de configurar los módulos de Koin para que puedas inyectar estas dependencias en tu aplicación.
 
-### 📖 Theory: (replace-me: Theory title)
+### 📖 Theory: ¿Qué es un módulo de Koin?
 
-<!-- GitHub-styled notifications can be used outside of ordered lists. Available options are: NOTE, IMPORTANT, WARNING, TIP, CAUTION -->
 <!--
-> [!NOTE]
-> (Important note or additional information relevant to this section)
- -->
+> [!IMPORTANT]
+> Un módulo de Koin es una colección de definiciones de dependencias. Permite declarar cómo se crean y comparten las instancias de tus clases.
+-->
 
-(replace-me: Optional theory or background information relevant to this step)
+Los módulos de Koin te permiten definir qué objetos estarán disponibles para inyección y su ciclo de vida (singleton, factory, etc.).
 
-### ⌨️ Activity: (replace-me: Activity title)
+### ⌨️ Activity: Crea y registra tus módulos de Koin
 
-1. (replace-me: First instruction)
-1. (replace-me: Second instruction)
-1. (replace-me: Additional instructions as needed)
+1. En `KMPKoin/shared/src/commonMain/kotlin/io/github/kevinah95/di/`, crea un archivo `AppModule.kt` con el siguiente contenido:
+   ```kotlin
+   package io.github.kevinah95.di
+
+   import io.github.kevinah95.data.UserRepository
+   import org.koin.dsl.module
+
+   val appModule = module {
+       single { UserRepository() }
+   }
+   ```
+2. (Opcional) Si tienes más dependencias, agrégalas en este módulo o crea módulos adicionales.
+3. En la misma carpeta, crea `KoinApp.kt` para inicializar Koin:
+   ```kotlin
+   package io.github.kevinah95.di
+
+   import org.koin.core.context.startKoin
+
+   fun initKoin() = startKoin {
+       modules(appModule)
+   }
+   ```
 
 <details>
 <summary>Having trouble? 🤷</summary><br/>
 
-- (replace-me: Troubleshooting tip or hint)
-- (replace-me: Additional troubleshooting tips as needed)
+- Si tienes errores de importación, revisa que los paquetes y rutas sean correctos.
+- Consulta la [documentación oficial de Koin](https://insert-koin.io/docs/reference/koin-core/modules/) para más ejemplos de módulos.
 
 </details>
