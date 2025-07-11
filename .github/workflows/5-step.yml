@@ -1,4 +1,4 @@
-name: Step 5 - Final Review
+name: Step 5
 
 on:
   workflow_dispatch:
@@ -49,8 +49,10 @@ jobs:
           repository: ${{ env.ISSUE_REPOSITORY }}
           issue-number: ${{ env.ISSUE_NUMBER }}
           file: ${{ env.STEP_6_FILE }}
-      - name: Disable current workflow
-        run: gh workflow disable "${{github.workflow}}"
+      - name: Disable current workflow and enable next one
+        run: |
+          gh workflow disable "${{github.workflow}}"
+          gh workflow enable "Step 6 - Final Review"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

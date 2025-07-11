@@ -1,4 +1,4 @@
-name: Step 5 - Final Review
+name: Step 6 - Final Review
 
 on:
   workflow_dispatch:
