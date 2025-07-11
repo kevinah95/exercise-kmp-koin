@@ -20,18 +20,29 @@ En Compose Multiplatform, puedes usar funciones como `get()` o `inject()` de Koi
 1. Abre `KMPKoin/composeApp/src/commonMain/kotlin/io/github/kevinah95/App.kt`.
 2. Inyecta el repositorio de usuarios usando `koinInject` y el ViewModel usando `koinViewModel` en tu composable principal:
    ```kotlin
-   import org.koin.compose.koinInject
    import org.koin.compose.koinViewModel
-   import io.github.kevinah95.data.UserRepository
    import io.github.kevinah95.UserViewModel
 
    @Composable
    fun App() {
-       val userViewModel = koinViewModel<UserViewModel>()
-       val greeting = userViewModel.getGreeting()
-       // Usa el greeting en tu UI, por ejemplo:
-       Text(text = greeting)
-       // También puedes mostrar la lista de usuarios si lo deseas
+      MaterialTheme {
+         var showContent by remember { mutableStateOf(false) }
+         val userViewModel = koinViewModel<UserViewModel>()
+         Column(
+               modifier = Modifier
+                  .safeContentPadding()
+                  .fillMaxSize(),
+               horizontalAlignment = Alignment.CenterHorizontally,
+         ) {
+               Button(onClick = { showContent = !showContent }) {
+                  Text("Click me!")
+               }
+               AnimatedVisibility(showContent) {
+                  val greeting = userViewModel.getGreeting()
+                  Text("Compose: $greeting")
+               }
+         }
+      }
    }
    ```
 
