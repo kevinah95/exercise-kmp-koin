@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - main
+      - 'feature/koin-kmp'
 
 permissions:
   contents: write

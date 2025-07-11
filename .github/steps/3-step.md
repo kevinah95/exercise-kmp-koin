@@ -1,4 +1,7 @@
+
 ## Step 3: Configura los módulos de Koin
+
+> **Importante:** Realiza todos los pasos del ejercicio en un solo branch de trabajo llamado `feature/koin-kmp`.
 
 Ahora que tienes tus modelos y repositorios, es momento de configurar los módulos de Koin para que puedas inyectar estas dependencias en tu aplicación.
 

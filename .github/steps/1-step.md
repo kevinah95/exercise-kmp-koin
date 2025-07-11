@@ -1,4 +1,7 @@
+
 # Step 1: Agrega las dependencias de Koin usando Version Catalog
+
+> **Importante:** Realiza todos los pasos del ejercicio en un solo branch de trabajo llamado `feature/koin-kmp`. No mezcles los cambios a `main` hasta terminar el ejercicio y pasar la revisión.
 
 Ahora que conoces la estructura del proyecto, el siguiente paso es agregar Koin para la inyección de dependencias utilizando el Version Catalog (`libs.versions.toml`) y el BOM de Koin (Bill of Materials) versión 4.
 

@@ -1,4 +1,7 @@
+
 ## Step 4: Inicializa Koin en cada plataforma
+
+> **Importante:** Realiza todos los pasos del ejercicio en un solo branch de trabajo llamado `feature/koin-kmp`.
 
 Ya tienes tus módulos de Koin listos. Ahora debes inicializar Koin en el punto de entrada de cada plataforma para que la inyección de dependencias funcione correctamente.
 

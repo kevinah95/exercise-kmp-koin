@@ -1,4 +1,7 @@
+
 # Step 2: Crea los modelos y repositorios de usuario
+
+> **Importante:** Realiza todos los pasos del ejercicio en un solo branch de trabajo llamado `feature/koin-kmp`.
 
 Ahora que tienes Koin integrado, es momento de definir la lógica de negocio creando los modelos y repositorios para la gestión de usuarios en el módulo `KMPKoin`.
 
