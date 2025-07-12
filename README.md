@@ -27,7 +27,7 @@ En este ejercicio, vas a:
 
 Haz una copia de este repositorio en tu cuenta, espera unos segundos a que se preparen los primeros pasos y ¡comienza el reto!
 
-[![](https://img.shields.io/badge/Copiar%20Ejercicio-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/new?template_owner=kevinah95&template_name=prototype-exercise-template-v2&owner=%40me&name=prototype-exercise-template-v2&description=Ejercicio:+KMP+y+Koin&visibility=public)
+[![](https://img.shields.io/badge/Copiar%20Ejercicio-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/new?template_owner=kevinah95&template_name=exercise-kmp-koin&owner=%40me&name=exercise-kmp-koin&description=Ejercicio:+KMP+y+Koin&visibility=public)
 
 <details>
 <summary>¿Tienes problemas? 🤷</summary><br/>
