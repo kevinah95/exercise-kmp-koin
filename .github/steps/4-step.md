@@ -17,7 +17,20 @@ En proyectos multiplataforma, cada plataforma (Android, iOS) tiene su propio cic
 ### ⌨️ Actividad: Inicializa Koin en Android e iOS
 
 1. **Android:**
-   - Abre `KMPKoin/composeApp/src/androidMain/kotlin/io/github/kevinah95/MainApplication.kt`.
+   - Crea una clase `MainApplication` que extienda de `Application` si no la tienes ya en `KMPKoin/androidApp/src/main/kotlin/io/github/kevinah95/kmpkoin/MainApplication.kt`:
+     ```kotlin
+     package io.github.kevinah95.kmpkoin
+
+     import android.app.Application
+
+     class MainApplication : Application() {
+         override fun onCreate() {
+             super.onCreate()
+             // Aquí inicializaremos Koin
+         }
+     }
+     ```
+   - Abre `KMPKoin/androidApp/src/main/kotlin/io/github/kevinah95/kmpkoin/MainApplication.kt`.
    - Llama a `initKoin()` en el método `onCreate` de tu clase `Application`:
      ```kotlin
      class MainApplication : Application() {
@@ -35,15 +48,6 @@ En proyectos multiplataforma, cada plataforma (Android, iOS) tiene su propio cic
          <!-- otras configuraciones -->
      </application>
      ```
-2. **iOS:**
-   - Abre `KMPKoin/composeApp/src/iosMain/kotlin/io/github/kevinah95/MainViewController.kt`.
-   - Modifica la función para inicializar Koin usando `initKoin()` dentro del controlador:
-     ```kotlin
-     import io.github.kevinah95.di.initKoin
-     
-     fun MainViewController() = ComposeUIViewController(configure = { initKoin() }) { App() }
-     ```
-   - Así aseguras que Koin se inicializa correctamente al arrancar la app en iOS.
 3. Verifica que la app arranca sin errores y que puedes inyectar dependencias en ambas plataformas.
 
 <details>

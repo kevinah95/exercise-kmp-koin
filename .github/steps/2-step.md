@@ -16,15 +16,15 @@ Un modelo representa la estructura de los datos (por ejemplo, un usuario). Un re
 
 ### ⌨️ Actividad: Implementa User y UserRepository
 
-1. En `KMPKoin/shared/src/commonMain/kotlin/io/github/kevinah95/data/`, crea un archivo `User.kt` con el siguiente contenido:
+1. En `KMPKoin/shared/src/commonMain/kotlin/io/github/kevinah95/kmpkoin/data/`, crea un archivo `User.kt` con el siguiente contenido:
    ```kotlin
-   package io.github.kevinah95.data
+   package io.github.kevinah95.kmpkoin.data
 
    data class User(val id: String, val name: String, val email: String)
    ```
 2. En la misma carpeta, crea `UserRepository.kt`:
    ```kotlin
-   package io.github.kevinah95.data
+   package io.github.kevinah95.kmpkoin.data
 
    class UserRepository {
        private val users = mutableListOf<User>()
@@ -38,7 +38,7 @@ Un modelo representa la estructura de los datos (por ejemplo, un usuario). Un re
    ```
 3. (Opcional) Crea un archivo `DefaultData.kt` para poblar el repositorio con datos de ejemplo:
    ```kotlin
-   package io.github.kevinah95.data
+   package io.github.kevinah95.kmpkoin.data
 
    object DefaultData {
        val sampleUsers = listOf(
@@ -50,9 +50,9 @@ Un modelo representa la estructura de los datos (por ejemplo, un usuario). Un re
 4. Asegúrate de que los archivos estén en el paquete correcto y que el código compile.
 5. (Para el siguiente paso) Crea un archivo `UserViewModel.kt` en la misma carpeta con una implementación básica:
    ```kotlin
-   package io.github.kevinah95
+   package io.github.kevinah95.kmpkoin.data
 
-   import io.github.kevinah95.data.UserRepository
+   import io.github.kevinah95.kmpkoin.data.UserRepository
 
    class UserViewModel(private val userRepository: UserRepository) {
        fun getGreeting(): String = "Hello, ${userRepository.getUsers().firstOrNull()?.name ?: "Guest"}!"
