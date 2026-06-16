@@ -8,15 +8,16 @@ plugins {
 }
 
 kotlin {
-    listOf(
-        iosArm64(),
-        iosSimulatorArm64()
-    ).forEach { iosTarget ->
-        iosTarget.binaries.framework {
-            baseName = "Shared"
-            isStatic = true
-        }
-    }
+    // Uncomment to use ios
+//    listOf(
+//        iosArm64(),
+//        iosSimulatorArm64()
+//    ).forEach { iosTarget ->
+//        iosTarget.binaries.framework {
+//            baseName = "Shared"
+//            isStatic = true
+//        }
+//    }
     
     androidLibrary {
        namespace = "io.github.kevinah95.kmpkoin.shared"
