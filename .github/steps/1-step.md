@@ -37,11 +37,18 @@ En proyectos modernos, es recomendable definir las versiones y módulos de depen
 3. En los archivos `build.gradle.kts` de los módulos `shared`, agrega las dependencias de Koin usando el catalog:
    ```kotlin
    // shared/build.gradle.kts
-   implementation(project.dependencies.platform(libs.koin.bom))
-   implementation(libs.koin.core)
-   implementation(libs.koin.compose)
-   implementation(libs.koin.compose.viewmodel)
-   implementation(libs.koin.compose.viewmodel.navigation)
+   kotlin {
+       sourceSets {
+           commonMain.dependencies {
+               // ... otras dependencias
+               implementation(project.dependencies.platform(libs.koin.bom))
+               implementation(libs.koin.core)
+               implementation(libs.koin.compose)
+               implementation(libs.koin.compose.viewmodel)
+               implementation(libs.koin.compose.viewmodel.navigation)
+           }
+       }
+   }
    ```
 
 <details>

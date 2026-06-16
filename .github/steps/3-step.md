@@ -16,26 +16,29 @@ Los módulos de Koin te permiten definir qué objetos estarán disponibles para 
 
 ### ⌨️ Actividad: Crea y registra tus módulos de Koin
 
-1. En `KMPKoin/shared/src/commonMain/kotlin/io/github/kevinah95/di/`, crea un archivo `AppModule.kt` con el siguiente contenido:
+1. En `KMPKoin/shared/src/commonMain/kotlin/io/github/kevinah95/kmpkoin/di/`, crea un archivo `DataModule.kt` con el siguiente contenido:
    ```kotlin
-   package io.github.kevinah95.di
+   package io.github.kevinah95.kmpkoin.di
 
-   import io.github.kevinah95.data.UserRepository
+   import io.github.kevinah95.kmpkoin.data.UserRepository
    import org.koin.dsl.module
 
-   val appModule = module {
+   val dataModule = module {
        single { UserRepository() }
    }
    ```
 2. (Opcional) Si tienes más dependencias, agrégalas en este módulo o crea módulos adicionales.
-3. En la misma carpeta, crea `KoinApp.kt` para inicializar Koin:
+3. En la misma carpeta, crea `KoinHelper.kt` para inicializar Koin:
    ```kotlin
-   package io.github.kevinah95.di
+   package io.github.kevinah95.kmpkoin.di
 
    import org.koin.core.context.startKoin
 
-   fun initKoin() = startKoin {
-       modules(appModule)
+   fun initKoin(config: KoinAppDeclaration? = null){
+        startKoin {
+            includes(config)
+            modules(dataModule)
+        }
    }
    ```
 

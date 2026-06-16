@@ -52,7 +52,6 @@ Un modelo representa la estructura de los datos (por ejemplo, un usuario). Un re
    ```kotlin
    package io.github.kevinah95.kmpkoin.data
 
-   import io.github.kevinah95.kmpkoin.data.UserRepository
 
    class UserViewModel(private val userRepository: UserRepository) {
        fun getGreeting(): String = "Hello, ${userRepository.getUsers().firstOrNull()?.name ?: "Guest"}!"
