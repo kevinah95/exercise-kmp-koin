@@ -5,7 +5,7 @@
 
 Ahora que tienes tus modelos y repositorios, es momento de configurar los módulos de Koin para que puedas inyectar estas dependencias en tu aplicación.
 
-### 📖 Theory: ¿Qué es un módulo de Koin?
+### 📖 Teoría: ¿Qué es un módulo de Koin?
 
 <!--
 > [!IMPORTANT]
@@ -14,7 +14,7 @@ Ahora que tienes tus modelos y repositorios, es momento de configurar los módul
 
 Los módulos de Koin te permiten definir qué objetos estarán disponibles para inyección y su ciclo de vida (singleton, factory, etc.).
 
-### ⌨️ Activity: Crea y registra tus módulos de Koin
+### ⌨️ Actividad: Crea y registra tus módulos de Koin
 
 1. En `KMPKoin/shared/src/commonMain/kotlin/io/github/kevinah95/di/`, crea un archivo `AppModule.kt` con el siguiente contenido:
    ```kotlin

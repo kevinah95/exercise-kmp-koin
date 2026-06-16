@@ -5,7 +5,7 @@
 
 Ahora que tienes Koin integrado, es momento de definir la lógica de negocio creando los modelos y repositorios para la gestión de usuarios en el módulo `KMPKoin`.
 
-### 📖 Theory: ¿Por qué separar modelos y repositorios?
+### 📖 Teoría: ¿Por qué separar modelos y repositorios?
 
 <!--
 > [!NOTE]
@@ -14,7 +14,7 @@ Ahora que tienes Koin integrado, es momento de definir la lógica de negocio cre
 
 Un modelo representa la estructura de los datos (por ejemplo, un usuario). Un repositorio abstrae el acceso y manipulación de esos datos, permitiendo cambiar la fuente de datos sin afectar el resto de la app.
 
-### ⌨️ Activity: Implementa User y UserRepository
+### ⌨️ Actividad: Implementa User y UserRepository
 
 1. En `KMPKoin/shared/src/commonMain/kotlin/io/github/kevinah95/data/`, crea un archivo `User.kt` con el siguiente contenido:
    ```kotlin

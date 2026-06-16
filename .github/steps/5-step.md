@@ -6,7 +6,7 @@
 
 ¡Ya tienes Koin funcionando en ambas plataformas! Ahora es momento de consumir las dependencias inyectadas (por ejemplo, el UserRepository) desde la UI usando Koin y Compose Multiplatform.
 
-### 📖 Theory: Inyección de dependencias en la UI
+### 📖 Teoría: Inyección de dependencias en la UI
 
 <!--
 > [!TIP]
@@ -15,7 +15,7 @@
 
 En Compose Multiplatform, puedes usar funciones como `get()` o `inject()` de Koin para obtener instancias de tus dependencias en los composables o viewmodels.
 
-### ⌨️ Activity: Inyecta y usa UserRepository en la UI
+### ⌨️ Actividad: Inyecta y usa UserRepository en la UI
 
 1. Abre `KMPKoin/composeApp/src/commonMain/kotlin/io/github/kevinah95/App.kt`.
 2. Inyecta el repositorio de usuarios usando `koinInject` y el ViewModel usando `koinViewModel` en tu composable principal:

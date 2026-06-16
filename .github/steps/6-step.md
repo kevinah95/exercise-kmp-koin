@@ -2,7 +2,7 @@
 
 ¡Ya casi terminas! Ahora que completaste todos los pasos y tu branch `feature/koin-kmp` tiene todos los cambios, es momento de fusionar tu trabajo a `main`.
 
-### ⌨️ Activity: Crea el Pull Request
+### ⌨️ Actividad: Crea el Pull Request
 
 1. Ve a la pestaña **Pull requests** en GitHub.
 2. Haz clic en **New pull request**.

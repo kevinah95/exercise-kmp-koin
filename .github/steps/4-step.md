@@ -5,7 +5,7 @@
 
 Ya tienes tus módulos de Koin listos. Ahora debes inicializar Koin en el punto de entrada de cada plataforma para que la inyección de dependencias funcione correctamente.
 
-### 📖 Theory: ¿Por qué inicializar Koin en cada plataforma?
+### 📖 Teoría: ¿Por qué inicializar Koin en cada plataforma?
 
 <!--
 > [!TIP]
@@ -14,7 +14,7 @@ Ya tienes tus módulos de Koin listos. Ahora debes inicializar Koin en el punto 
 
 En proyectos multiplataforma, cada plataforma (Android, iOS) tiene su propio ciclo de vida y punto de entrada. Por eso, la inicialización de Koin debe hacerse en cada uno de ellos.
 
-### ⌨️ Activity: Inicializa Koin en Android e iOS
+### ⌨️ Actividad: Inicializa Koin en Android e iOS
 
 1. **Android:**
    - Abre `KMPKoin/composeApp/src/androidMain/kotlin/io/github/kevinah95/MainApplication.kt`.
